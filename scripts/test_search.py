@@ -14,12 +14,12 @@ class TestSearch:
         self.driver = init_driver()
         self.search_page = SearchPage(self.driver)
 
-    @pytest.mark.parametrize("content",yml_with_file("search_data")["test_search"])
-    def test_search(self,content):
+    @pytest.mark.parametrize("content2",yml_with_file("search_data")["test_search"])
+    def test_search(self,content2):
         #点击放大镜
         self.search_page.click_search()
         #输入文字
-        self.search_page.input_content(content)
+        self.search_page.input_content(content2)
         #点击返回
         self.search_page.click_back()
 
